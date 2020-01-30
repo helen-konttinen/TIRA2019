@@ -2,23 +2,41 @@ package Harjoitustyo.Tietoluokat;
 
 public class Node {
 
-    public Node (Object d, int source, int r) {
+    public Node (int d, int s, int r) {
       data = d;
-      syotetiedosto = source;
+      source = s;
       rivinumero = r;
+      amount = 1;
    }
    
-   /* setters */
-   public void data (Object d) {
+   /* setterit */
+   public void data (int d) {
       data = d;
    }
    
-   /* getters */
-   public Object data () {
+   public void amount (int a) {
+      amount = a;
+   }
+
+   /* getterit */
+   public int data () {
       return data;
    }
+
+   public int source () {
+      return source;
+   }
+
+   public int rivi () {
+      return rivinumero;
+   }
+
+   public int amount () {
+      return amount;
+   }
    
-   private Object data;    // solmun tietosis�lt�
-   private int syotetiedosto; // xor operaatio  n apuarvo
-   private int rivinumero;
+   private int data;    // solmun tietosisältö
+   private int source; // xor operaatio  n apuarvo
+   private int rivinumero; //and opraation apuarvo
+   private int amount; //or operaation apuarvo
 }
