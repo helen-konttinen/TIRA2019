@@ -2,20 +2,19 @@ package Harjoitustyo.Tietoluokat;
 
 public class Lokero {
 
-   public Lokero (int i, Node d) {
+   public Lokero (int i, Node n) {
          indeksi = i;
-         data = d;
+         node = n;
          seuraava = edellinen = null;
-         mod = 0;
       }
       
-      /* setters */
+      /* setterit */
       public void indeksi (int i) {
          indeksi = i;
       }
       
-      public void data (Node d) {
-         data = d;
+      public void node (Node n) {
+         node = n;
       }
       
       public void seuraava (Lokero s){
@@ -26,17 +25,13 @@ public class Lokero {
          edellinen = e;
       }
       
-      public void mod (int m) {
-         mod = m;
-      }
-      
-      /* getters */
+      /* getterit */
       public int indeksi () {
          return indeksi;
       }
-      
-      public Node data () {
-         return data;
+
+      public Node node () {
+         return node;
       }
       
       public Lokero seuraava () {
@@ -47,14 +42,8 @@ public class Lokero {
          return edellinen;
       }
       
-      public int mod () {
-         return mod;
-      }
-      
-      
       private int indeksi;
-      private Node data;
+      private Node node;
       private Lokero seuraava;
       private Lokero edellinen;
-      private int mod;  // k�ytet��n indeksin apuna alkion uudelleensijoitukseen
 }
