@@ -1,5 +1,3 @@
-package Harjoitustyo.Tietoluokat;
-
 public class Lokero {
 
    public Lokero (int i, Node n) {
